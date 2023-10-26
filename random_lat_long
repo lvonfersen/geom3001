@@ -1,0 +1,18 @@
+import random
+
+# Define the minimum and maximum latitude and longitude values
+lon_min = 153.04274490357125
+lon_max = 153.1913274655799
+lat_min = -27.121495865445663
+lat_max = -26.815204672129823
+
+# Generate 30 random latitude and longitude points
+random_points = []
+for _ in range(30):
+    random_longitude = random.uniform(lon_min, lon_max)
+    random_latitude = random.uniform(lat_min, lat_max)
+    random_points.append((random_latitude, random_longitude))
+
+# Print the generated points
+for i, (lat, lon) in enumerate(random_points, start=1):
+    print(f"Point {i}: Latitude = {lat}, Longitude = {lon}")
