@@ -1,0 +1,20 @@
+# Constants for calculating 
+resolution = (-30, 30)
+pixel_length = resolution[1]  # in metres
+m_per_ha = 10000  # conversion from metres to kilometres
+
+# Area per pixel
+area_per_pixel = pixel_length ** 2 / m_per_ha ** 2
+
+# Calculate areas
+#burnt_area = burnt.sum() * area_per_pixel
+mangroves_dt = (87387 * area_per_pixel)
+saltmarsh_dt = (57693 * area_per_pixel)
+
+mangroves_rf = (98961 * area_per_pixel)
+saltmarsh_rf = (41573 * area_per_pixel)
+ 
+print('Mangroves (DT):', mangroves_dt, 'ha^2')
+print('Saltmarsh (DT):', saltmarsh_dt, 'ha^2')
+print('Mangroves (RF):', mangroves_rf, 'ha^2')
+print('Saltmarsh (RF):', saltmarsh_rf, 'ha^2')
